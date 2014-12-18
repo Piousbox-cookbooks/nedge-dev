@@ -1,0 +1,21 @@
+
+def puts! args, label=""
+  puts "+++ +++ #{label}"
+  puts args.inspect
+end
+
+
+
+# all the packages
+node['apt_packages'].each do |package_name|
+  package package_name
+end
+
+# all the gems
+node['ruby_gems'].each do |gem_name|
+  gem_package gem_name
+end
+
+
+
+
